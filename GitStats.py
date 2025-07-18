@@ -187,7 +187,7 @@ if pat and owner and repo:
         art = f"{avg_review_time:.2f}" if avg_review_time else "N/A"
         st.markdown(f"<div class='stMetric'><strong>Avg Review Time (days)</strong><br>{art}</div>", unsafe_allow_html=True)
 
-    # --- Charts ---
+    # Charts
     c1, c2 = st.columns(2)
     with c1:
         commits_per_day = commit_df.groupby("date").size().reset_index(name="commits")
@@ -200,12 +200,12 @@ if pat and owner and repo:
                        color_discrete_map={"additions": "green", "deletions": "red"})
         st.plotly_chart(fig2, use_container_width=True)
 
-    # --- Pull Requests Table ---
+    # Pull Requests Table
     st.subheader(":inbox_tray: Recent Pull Requests")
     if not pr_df.empty:
         st.dataframe(pr_df[['title', 'author', 'created', 'merged_at', 'review_time']])
 
-    # --- Recent Activity ---
+    # Recent Activity
     st.subheader(":hourglass: Recent Commit Activity")
     st.dataframe(commit_df.sort_values(by="date", ascending=False).head(10))
 

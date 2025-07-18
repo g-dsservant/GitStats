@@ -12,10 +12,7 @@ GitStats is a professional GitHub analytics dashboard built with Streamlit. It a
 - 🔁 Code churn analysis (additions/deletions over time)
 - 👥 Contributor performance
 - 📦 Deployment status (latest deployments)
-- 🧑‍💻 Individual and team-level GitHub activity
 - 📆 Recent activity feed (commit + PR timeline)
-- 🌙 Light/Dark mode toggle
-- 🎨 Inverse background charts (white charts in dark mode, dark charts in light mode)
 
 ---
 
